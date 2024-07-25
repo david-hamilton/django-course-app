@@ -81,8 +81,7 @@ class Question(models.Model):
             return False
 
     def __str__(self):
-        return "Question text: " + self.content + "," + \
-            "Grade: " + self.grade
+        return "Question text: " + self.content + ", " + "Grade: " + str(self.grade)
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)

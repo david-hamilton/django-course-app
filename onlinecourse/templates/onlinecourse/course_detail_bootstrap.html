@@ -51,6 +51,11 @@
                 {% endfor %}
             </div>
             <!-- Course detail template changes go here -->
+            {% if user.is_authenticated %}
+            {% for lesson in course.lesson_set.all %}
+            <h3></h3>
+            <h4>{{lesson.qu }} </h4>
+            <h3></h3>
     </div>
 </body>
 </html>
